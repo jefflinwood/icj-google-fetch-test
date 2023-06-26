@@ -1,14 +1,5 @@
-const gulp = require("gulp");
+import fetch from './tasks/fetch.js';
+import gulp from 'gulp';
 
-// load gulp tasks from ./tasks
-require("gulp-load-tasks")();
-
-// default tasks
-gulp.task(
-  "default",
-  gulp.series(
-    "fetch"
-  )
-)
-
-
+gulp.task('default', gulp.series('fetch'));
+gulp.task(fetch);
